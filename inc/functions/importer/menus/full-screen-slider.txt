@@ -1,0 +1,1066 @@
+// FILE-INFO-START
+// menu-id: full-screen-slider;
+// data-type: sql;
+// FILE-INFO-END
+		
+// INSERT MENU
+		$wpdb->query("INSERT INTO ".$wpdb->prefix."terms (name, slug) 
+										VALUES ('Full Screen Slider', 'full-screen-slider')");		
+		$new_menu_id = $wpdb->insert_id;				
+
+		$wpdb->query("INSERT INTO ".$wpdb->prefix."term_taxonomy (term_id, taxonomy, count)
+										VALUES (".$new_menu_id.", 'nav_menu', 8)");				
+		$tti = $wpdb->insert_id;
+		
+			$prev_post_id = array();
+		
+			$post_info = array(
+				"post_author" => 1, 
+				"post_date" => '2016-08-16 15:42:13', 
+				"post_date_gmt" => '2016-08-16 15:42:13', 
+				"post_content" => '', 
+				"post_title" => 'Home', 
+				"post_excerpt" => '', 
+				"post_status" => 'publish', 
+				"comment_status" => 'closed', 
+				"ping_status" => 'closed', 
+				"post_password" => '', 
+				"post_name" => 'home-4', 
+				"to_ping" => '', 
+				"pinged" => '', 
+				"post_modified" => '2016-08-16 15:42:13', 
+				"post_modified_gmt" => '2016-08-16 15:42:13', 
+				"post_content_filtered" => '', 
+				"post_parent" => 0, 
+				"menu_order" => 1, 
+				"post_type" => 'nav_menu_item', 	
+				"post_mime_type" => '', 
+				"comment_count" => 0
+			);
+			$post_info_types = array(
+				"%d", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%d", 
+				"%d", 
+				"%s", 	
+				"%s", 
+				"%d"
+			);			
+			$wpdb->insert($wpdb->prefix."posts", $post_info, $post_info_types);
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[729] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=729", "?p=".$new_post_id, "#wpurl#/?p=729")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '729')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#slideshow')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$post_info = array(
+				"post_author" => 1, 
+				"post_date" => '2016-08-16 15:42:13', 
+				"post_date_gmt" => '2016-08-16 15:42:13', 
+				"post_content" => '', 
+				"post_title" => 'About', 
+				"post_excerpt" => '', 
+				"post_status" => 'publish', 
+				"comment_status" => 'closed', 
+				"ping_status" => 'closed', 
+				"post_password" => '', 
+				"post_name" => 'about-3', 
+				"to_ping" => '', 
+				"pinged" => '', 
+				"post_modified" => '2016-08-16 15:42:13', 
+				"post_modified_gmt" => '2016-08-16 15:42:13', 
+				"post_content_filtered" => '', 
+				"post_parent" => 0, 
+				"menu_order" => 2, 
+				"post_type" => 'nav_menu_item', 	
+				"post_mime_type" => '', 
+				"comment_count" => 0
+			);
+			$post_info_types = array(
+				"%d", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%d", 
+				"%d", 
+				"%s", 	
+				"%s", 
+				"%d"
+			);			
+			$wpdb->insert($wpdb->prefix."posts", $post_info, $post_info_types);
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[730] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=730", "?p=".$new_post_id, "#wpurl#/?p=730")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '730')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#about')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$post_info = array(
+				"post_author" => 1, 
+				"post_date" => '2016-08-16 15:42:13', 
+				"post_date_gmt" => '2016-08-16 15:42:13', 
+				"post_content" => '', 
+				"post_title" => 'Services', 
+				"post_excerpt" => '', 
+				"post_status" => 'publish', 
+				"comment_status" => 'closed', 
+				"ping_status" => 'closed', 
+				"post_password" => '', 
+				"post_name" => 'services-4', 
+				"to_ping" => '', 
+				"pinged" => '', 
+				"post_modified" => '2016-08-16 15:42:13', 
+				"post_modified_gmt" => '2016-08-16 15:42:13', 
+				"post_content_filtered" => '', 
+				"post_parent" => 0, 
+				"menu_order" => 3, 
+				"post_type" => 'nav_menu_item', 	
+				"post_mime_type" => '', 
+				"comment_count" => 0
+			);
+			$post_info_types = array(
+				"%d", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%d", 
+				"%d", 
+				"%s", 	
+				"%s", 
+				"%d"
+			);			
+			$wpdb->insert($wpdb->prefix."posts", $post_info, $post_info_types);
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[731] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=731", "?p=".$new_post_id, "#wpurl#/?p=731")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '731')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#services')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$post_info = array(
+				"post_author" => 1, 
+				"post_date" => '2016-08-16 15:42:13', 
+				"post_date_gmt" => '2016-08-16 15:42:13', 
+				"post_content" => '', 
+				"post_title" => 'Work', 
+				"post_excerpt" => '', 
+				"post_status" => 'publish', 
+				"comment_status" => 'closed', 
+				"ping_status" => 'closed', 
+				"post_password" => '', 
+				"post_name" => 'work', 
+				"to_ping" => '', 
+				"pinged" => '', 
+				"post_modified" => '2016-08-16 15:42:13', 
+				"post_modified_gmt" => '2016-08-16 15:42:13', 
+				"post_content_filtered" => '', 
+				"post_parent" => 0, 
+				"menu_order" => 4, 
+				"post_type" => 'nav_menu_item', 	
+				"post_mime_type" => '', 
+				"comment_count" => 0
+			);
+			$post_info_types = array(
+				"%d", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%d", 
+				"%d", 
+				"%s", 	
+				"%s", 
+				"%d"
+			);			
+			$wpdb->insert($wpdb->prefix."posts", $post_info, $post_info_types);
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[732] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=732", "?p=".$new_post_id, "#wpurl#/?p=732")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '732')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#work')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$post_info = array(
+				"post_author" => 1, 
+				"post_date" => '2016-08-16 15:42:13', 
+				"post_date_gmt" => '2016-08-16 15:42:13', 
+				"post_content" => '', 
+				"post_title" => 'Team', 
+				"post_excerpt" => '', 
+				"post_status" => 'publish', 
+				"comment_status" => 'closed', 
+				"ping_status" => 'closed', 
+				"post_password" => '', 
+				"post_name" => 'team', 
+				"to_ping" => '', 
+				"pinged" => '', 
+				"post_modified" => '2016-08-16 15:42:13', 
+				"post_modified_gmt" => '2016-08-16 15:42:13', 
+				"post_content_filtered" => '', 
+				"post_parent" => 0, 
+				"menu_order" => 5, 
+				"post_type" => 'nav_menu_item', 	
+				"post_mime_type" => '', 
+				"comment_count" => 0
+			);
+			$post_info_types = array(
+				"%d", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%d", 
+				"%d", 
+				"%s", 	
+				"%s", 
+				"%d"
+			);			
+			$wpdb->insert($wpdb->prefix."posts", $post_info, $post_info_types);
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[733] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=733", "?p=".$new_post_id, "#wpurl#/?p=733")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '733')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#team')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$post_info = array(
+				"post_author" => 1, 
+				"post_date" => '2016-08-16 15:42:13', 
+				"post_date_gmt" => '2016-08-16 15:42:13', 
+				"post_content" => '', 
+				"post_title" => 'Pricing', 
+				"post_excerpt" => '', 
+				"post_status" => 'publish', 
+				"comment_status" => 'closed', 
+				"ping_status" => 'closed', 
+				"post_password" => '', 
+				"post_name" => 'pricing', 
+				"to_ping" => '', 
+				"pinged" => '', 
+				"post_modified" => '2016-08-16 15:42:13', 
+				"post_modified_gmt" => '2016-08-16 15:42:13', 
+				"post_content_filtered" => '', 
+				"post_parent" => 0, 
+				"menu_order" => 6, 
+				"post_type" => 'nav_menu_item', 	
+				"post_mime_type" => '', 
+				"comment_count" => 0
+			);
+			$post_info_types = array(
+				"%d", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%d", 
+				"%d", 
+				"%s", 	
+				"%s", 
+				"%d"
+			);			
+			$wpdb->insert($wpdb->prefix."posts", $post_info, $post_info_types);
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[734] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=734", "?p=".$new_post_id, "#wpurl#/?p=734")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '734')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#pricing')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$post_info = array(
+				"post_author" => 1, 
+				"post_date" => '2016-08-16 15:42:13', 
+				"post_date_gmt" => '2016-08-16 15:42:13', 
+				"post_content" => '', 
+				"post_title" => 'Blog', 
+				"post_excerpt" => '', 
+				"post_status" => 'publish', 
+				"comment_status" => 'closed', 
+				"ping_status" => 'closed', 
+				"post_password" => '', 
+				"post_name" => 'blog-4', 
+				"to_ping" => '', 
+				"pinged" => '', 
+				"post_modified" => '2016-08-16 15:42:13', 
+				"post_modified_gmt" => '2016-08-16 15:42:13', 
+				"post_content_filtered" => '', 
+				"post_parent" => 0, 
+				"menu_order" => 7, 
+				"post_type" => 'nav_menu_item', 	
+				"post_mime_type" => '', 
+				"comment_count" => 0
+			);
+			$post_info_types = array(
+				"%d", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%d", 
+				"%d", 
+				"%s", 	
+				"%s", 
+				"%d"
+			);			
+			$wpdb->insert($wpdb->prefix."posts", $post_info, $post_info_types);
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[735] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=735", "?p=".$new_post_id, "#wpurl#/?p=735")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '735')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#blog')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$post_info = array(
+				"post_author" => 1, 
+				"post_date" => '2016-08-16 15:42:13', 
+				"post_date_gmt" => '2016-08-16 15:42:13', 
+				"post_content" => '', 
+				"post_title" => 'Contact', 
+				"post_excerpt" => '', 
+				"post_status" => 'publish', 
+				"comment_status" => 'closed', 
+				"ping_status" => 'closed', 
+				"post_password" => '', 
+				"post_name" => 'contact-4', 
+				"to_ping" => '', 
+				"pinged" => '', 
+				"post_modified" => '2016-08-16 15:42:13', 
+				"post_modified_gmt" => '2016-08-16 15:42:13', 
+				"post_content_filtered" => '', 
+				"post_parent" => 0, 
+				"menu_order" => 8, 
+				"post_type" => 'nav_menu_item', 	
+				"post_mime_type" => '', 
+				"comment_count" => 0
+			);
+			$post_info_types = array(
+				"%d", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%s", 
+				"%d", 
+				"%d", 
+				"%s", 	
+				"%s", 
+				"%d"
+			);			
+			$wpdb->insert($wpdb->prefix."posts", $post_info, $post_info_types);
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[736] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=736", "?p=".$new_post_id, "#wpurl#/?p=736")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_vc_post_settings', 'a:1:{s:10:\"vc_grid_id\";a:0:{}}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '736')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#contact')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+					$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+													meta_value = '".$prev_post_id[729]."' 
+														WHERE post_id = ".$prev_post_id[729]." 
+															AND meta_key = '_menu_item_object_id'");
+					
+					$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+													meta_value = '".$prev_post_id[730]."' 
+														WHERE post_id = ".$prev_post_id[730]." 
+															AND meta_key = '_menu_item_object_id'");
+					
+					$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+													meta_value = '".$prev_post_id[731]."' 
+														WHERE post_id = ".$prev_post_id[731]." 
+															AND meta_key = '_menu_item_object_id'");
+					
+					$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+													meta_value = '".$prev_post_id[732]."' 
+														WHERE post_id = ".$prev_post_id[732]." 
+															AND meta_key = '_menu_item_object_id'");
+					
+					$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+													meta_value = '".$prev_post_id[733]."' 
+														WHERE post_id = ".$prev_post_id[733]." 
+															AND meta_key = '_menu_item_object_id'");
+					
+					$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+													meta_value = '".$prev_post_id[734]."' 
+														WHERE post_id = ".$prev_post_id[734]." 
+															AND meta_key = '_menu_item_object_id'");
+					
+					$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+													meta_value = '".$prev_post_id[735]."' 
+														WHERE post_id = ".$prev_post_id[735]." 
+															AND meta_key = '_menu_item_object_id'");
+					
+					$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+													meta_value = '".$prev_post_id[736]."' 
+														WHERE post_id = ".$prev_post_id[736]." 
+															AND meta_key = '_menu_item_object_id'");
+					
+			//wp_redirect(get_bloginfo("wpurl")."/wp-admin/nav-menus.php?action=edit&menu=".$new_menu_id);								
+		

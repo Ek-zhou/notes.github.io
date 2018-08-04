@@ -1,0 +1,13 @@
+.redux-image-select span { display: block; text-align: center; font-size: 0.8em; }
+.redux-field .select2-container.disable_empty_field .select2-search-choice-close { display: none !important; }
+.rwmb-input .rwmb-image-select { width: 140px; height: auto; }
+.rwmb-input select { min-width: 200px; }
+.rwmb-field.rwmb-radio-wrapper .rwmb-input > label { margin-right: 6px; }
+.vc_el-container .exort-js-composer:not([data-is-container=true]),
+.wpb_element_title .exort-js-composer { background: url(../images/js-composer.png) no-repeat; background-position: center center; background-size: 100% auto; }
+.wpb-textarea_raw_html.percent_text { height: 50px; }
+.redux-container .ui-button { height: auto; }
+.redux-field-container .ui-button-text-only .ui-button-text { padding: 0; }
+.exort-importer select { width: 180px;}
+.marginl18px { margin-left: 18px; }
+.themes-php .wrap #update-nag, .themes-php .wrap .update-nag { display: block; float: left; }
